@@ -27,7 +27,7 @@ jobs:
 
       # OPTIONAL — Deploy to your server via SSH
       - name: Deploy to Server
-        if: ${{ secrets.SERVER_IP != '20.224.162.42' }}
+        if: ${{ secrets.SERVER_IP != '' }}
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SERVER_IP }}
