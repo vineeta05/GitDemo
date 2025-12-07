@@ -26,7 +26,6 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/basic-node-app:latest
 
       - name: Deploy to Server
-        if: ${{ secrets.SERVER_IP }}
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SERVER_IP }}
